@@ -9,5 +9,57 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <h1 class="calc-title">Calculator</h1>
+    </nav>
+    <div class="container">
+      <div class="calc">
+        <div class="calc-display">
+          <!-- Dispalys problem statement -->
+          <div class="problem bg-tran" id="prob">0</div>
+          <hr />
+          <!-- Displays answer -->
+          <div class="solution bg-tran" id="soln">0</div>
+        </div>
+        <div class="calc-buttons">
+          <!-- Top most row of buttons, HERE:"(", ")", "CE", "C" -->
+          <div class="btn-row">
+            <div class="btn" id="btn-(" onclick="displayData('\(')">(</div>
+            <div class="btn" id="btn-)" onclick="displayData('\)')">)</div>
+            <div class="btn" id="btn-CE" onclick="remove()">CE</div>
+            <div class="btn" id="btn-C" onclick="resetCalc()">C</div>
+          </div>
+          <!-- Second row of buttons, HERE: "7", "8", "9", "/" -->
+          <div class="btn-row">
+            <div class="btn" id="btn-7" onclick="displayData('7')">7</div>
+            <div class="btn" id="btn-8" onclick="displayData('8')">8</div>
+            <div class="btn" id="btn-9" onclick="displayData('9')">9</div>
+            <div class="btn" id="btn-div" onclick="displayData('/')">/</div>
+          </div>
+          <!-- Third row of bottons, HERE: "4", "5", "6", "*" -->
+          <div class="btn-row">
+            <div class="btn" id="btn-4" onclick="displayData('4')">4</div>
+            <div class="btn" id="btn-5" onclick="displayData('5')">5</div>
+            <div class="btn" id="btn-6" onclick="displayData('6')">6</div>
+            <div class="btn" id="btn-mul" onclick="displayData('*')">*</div>
+          </div>
+          <!-- Fourth row of buttons, HERE: "1", "2", "3", "-" -->
+          <div class="btn-row">
+            <div class="btn" id="btn-1" onclick="displayData('1')">1</div>
+            <div class="btn" id="btn-2" onclick="displayData('2')">2</div>
+            <div class="btn" id="btn-3" onclick="displayData('3')">3</div>
+            <div class="btn" id="btn-sub" onclick="displayData('-')">-</div>
+          </div>
+          <!-- Fifth row of buttons, HERE: "0", ".", ".", "+" -->
+          <div class="btn-row">
+            <div class="btn" id="btn-0" onclick="displayData('0')">0</div>
+            <div class="btn" id="btn-point" onclick="displayData('.')">.</div>
+            <div class="btn" id="btn-ans" onclick="calculate()">=</div>
+            <div class="btn" id="btn-add" onclick="displayData('+')">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
